@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+body {
+  transition: all 300ms;
+  font-family: "Inter", sans-serif;
+  background-color: #1e202a;
+  color: white;
+  font-size: 12px; }
+
+h1 {
+  font-size: 26px;
+  font-weight: bold; }
+
+.clearfix {
+  clear: both; }
+
+.container .wrapper {
+  width: 960px;
+  margin: 0px auto; }
+
+header,
+.overview {
+  width: 97%;
+  margin: 30px 15px;
+  display: inline-block; }
+
+header .logo {
+  float: left;
+  width: 45%; }
+  header .logo h1 {
+    padding-bottom: 10px; }
+  header .logo p {
+    color: #8b97c6; }
+header .button {
+  float: right;
+  margin-top: 16px; }
+  header .button .btn,
+  header .button .text {
+    float: left; }
+  header .button .text {
+    color: #8b97c6;
+    padding: 5px 0px;
+    margin-right: 10px;
+    font-weight: bold; }
+  header .button .btn {
+    background: linear-gradient(to right, #8b97c6, #1db489);
+    position: relative;
+    width: 42px;
+    height: 20px;
+    border-radius: 10px; }
+    header .button .btn.active .dot {
+      left: 24px; }
+    header .button .btn .dot {
+      position: absolute;
+      top: 2px;
+      left: 3px;
+      width: 16px;
+      height: 16px;
+      background-color: #1e202a;
+      border-radius: 50%;
+      transition: all 300ms; }
+      header .button .btn .dot.on {
+        left: 22px; }
+
+.social-dash {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+  .social-dash.over .item {
+    height: 110px;
+    border-top: none; }
+  .social-dash .item {
+    width: 23%;
+    height: 170px;
+    background-color: #252a41;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 15px; }
+    .social-dash .item .gradient {
+      height: 3px;
+      background: #198ff5; }
+      .social-dash .item .gradient.insta {
+        background: linear-gradient(to right, #fdc468, #df4996); }
+      .social-dash .item .gradient.youtube {
+        background: #c4032a; }
+    .social-dash .item .content {
+      padding: 20px;
+      margin: 0px 5px;
+      text-align: center;
+      box-sizing: border-box; }
+    .social-dash .item .username {
+      padding-bottom: 4px;
+      width: 100%;
+      height: 16px;
+      overflow: hidden;
+      position: relative; }
+      .social-dash .item .username .name {
+        display: block;
+        padding-top: 4px;
+        padding-left: 68px;
+        text-align: left; }
+      .social-dash .item .username .img {
+        position: absolute;
+        top: 0px;
+        left: 23%; }
+    .social-dash .item .big {
+      font-size: 42px;
+      font-weight: 700;
+      padding: 10px 0px; }
+    .social-dash .item .short {
+      color: #8b97c6;
+      text-transform: uppercase;
+      padding-bottom: 16px;
+      letter-spacing: 3px; }
+    .social-dash .item .info {
+      color: #1db489; }
+      .social-dash .item .info.bad {
+        color: #dc414c; }
+      .social-dash .item .info::before {
+        content: "";
+        display: inline-block;
+        border: none;
+        width: 0px;
+        height: 0px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #1db489;
+        padding-top: 1px; }
+      .social-dash .item .info.bad::before {
+        border-bottom: none;
+        border-top: 5px solid #dc414c; }
+    .social-dash .item .top,
+    .social-dash .item .bottom {
+      width: 100%; }
+    .social-dash .item .top > div,
+    .social-dash .item .bottom > div {
+      float: left; }
+    .social-dash .item .top .right,
+    .social-dash .item .botoom .right {
+      float: right; }
+    .social-dash .item .top {
+      display: inline-block;
+      margin: 0px 0px 15px;
+      color: #8b97c6; }
+      .social-dash .item .top .left {
+        padding-top: 4px; }
+    .social-dash .item .bottom .left {
+      font-size: 24px;
+      font-weight: bold; }
+    .social-dash .item .bottom .right {
+      float: right;
+      padding-top: 8px; }
+
+.overview {
+  margin-top: 40px; }
+
+body.lightmode {
+  background-color: white;
+  color: #1e202a; }
+  body.lightmode header .button .btn {
+    background: #f0f2fa; }
+    body.lightmode header .button .btn .dot {
+      background: white; }
+  body.lightmode .social-dash .item {
+    background-color: #f0f2fa; }
+
+@media only screen and (max-width: 768px) {
+  .container .wrapper {
+    width: 90%;
+    margin: 0px auto;
+    overflow: hidden; }
+
+  header {
+    width: 100%;
+    margin: 0px;
+    padding: 0px 5px; }
+    header .logo {
+      float: none;
+      width: 100%;
+      margin-top: 40px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #8b97c6; }
+      header .logo p {
+        font-size: 14px; }
+    header .button {
+      float: none;
+      width: 100%;
+      padding-right: 5px;
+      box-sizing: border-box;
+      display: inline-block;
+      margin-bottom: 50px;
+      margin-top: 10px; }
+      header .button .text {
+        float: left;
+        font-size: 18px; }
+      header .button .btn {
+        float: right; }
+
+  .social-dash {
+    display: block; }
+    .social-dash .item {
+      width: 100%;
+      height: 280px;
+      margin-bottom: 26px; }
+      .social-dash .item .gradient {
+        height: 5px; }
+      .social-dash .item .username {
+        padding: 20px 0px;
+        font-size: 18px; }
+        .social-dash .item .username .img {
+          top: 24px;
+          left: 31%; }
+        .social-dash .item .username .name {
+          padding-left: 118px; }
+      .social-dash .item .big {
+        font-size: 92px; }
+      .social-dash .item .short {
+        padding-bottom: 30px; }
+
+  .overview {
+    width: 100%; }
+
+  .social-dash.over .item {
+    height: 117px; }
+    .social-dash.over .item .top .left h3 {
+      font-size: 14px; }
+    .social-dash.over .item .bottom h2 {
+      font-size: 38px; }
+    .social-dash.over .item .bottom .right {
+      padding-top: 22px;
+      font-size: 16px; } }
+
+/*# sourceMappingURL=style.css.map */
